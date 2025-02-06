@@ -1,5 +1,8 @@
 local map = vim.keymap.set
 
+
+
+
 map("i","jk","<Esc>",{desc="shortcut key for esc in insert mode"})
 
 ------------------telescope keymap setting------------------------
@@ -42,5 +45,6 @@ end, { desc = '[S]earch [N]eovim files' })
 ----------------------------NvimTree keymap setting----------------------------
 ---noremap=true prevents recursive mappings
 ---slient=true prevents command display in the command line
-map("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+map("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true })
 ------------------------------------------------------------------------------
+

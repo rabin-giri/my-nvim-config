@@ -1,6 +1,7 @@
 return {
   {
     "catppuccin/nvim",
+    lazy=false,
     name = "catppuccin",
     priority = 1000, -- Ensure it loads first
     config = function()
