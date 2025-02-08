@@ -33,7 +33,21 @@ require("lazy").setup({
   -- install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+  change_detection={
+          enabled=false,
+          notify=false,
+  },
 })
 
 require("config.options")
+
+-- Automatically run 'c.lua' script when opening a C file
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "c",  -- Match when opening C files
+  callback = function()
+    -- Run the 'c.lua' script
+    dofile(vim.fn.expand("~/.config/nvim/lua/config/ftplugin/c_cpp.lua"))
+  end
+})
+
 
